@@ -12,7 +12,7 @@ export default function Home() {
 
     function handleAccessCredential() {
         if(!code.trim()) {
-            return Alert.alert("Ingresso", "Informe o codigo do ingresso")
+            return Alert.alert("Ticket", "Inform Ticket Code")
         }
     }
     return (
@@ -26,11 +26,11 @@ export default function Home() {
                 <Input>
                 <MaterialCommunityIcons name="ticket-confirmation-outline" color={colors.green[200]} size={20} />
                 <Input.Field 
-                placeholder="Codigo do ingresso" 
+                placeholder="Ticket Code" 
                 onChangeText={setCode}/>
                 </Input>
-                <Button title="Acessar Credenciais" onPress={handleAccessCredential}/>
-                <Link href="/register" className='text-gray-100 text-base font-bold text-center mt-8'>Ainda nao possui ingresso?</Link>
+                <Button title="Access Credentials" onPress={handleAccessCredential}/>
+                <Link href="/register" className='text-gray-100 text-base font-bold text-center mt-8'>Does not have credentials?</Link>
             </View>
         </View>
     )
